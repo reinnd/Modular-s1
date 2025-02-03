@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 3.7em;
+    background-image: linear-gradient(#454645, #313431);
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.nbox{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid rgb(26, 255, 6); */
+    
+}
+
+.nbox li{
+    display: inline-block;
+    text-align: center;    
+    padding: 8px 10px 8px 0px;
+    /* border: 1px solid red; */
+    /* padding: 0px 5px; */
+}
+
+.nbox a{
+    /* border: 1px solid rgb(0, 26, 255); */
+    text-decoration: none;
+    font-size: medium;
+    transition: all 0.3s;
+    color: azure;
+    padding: 8px 12px 8px 12px;
+}
+
+.nbox a:hover, .drop:hover .drpbtn {
+    color: black;
+    background-color: azure;
+}
+
+.drpbtn, .drop{
+    cursor: pointer;
+}
+
+.drop-content, .drop-content:active{
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+.drop-content a{
+    border: 1px solid #00000000;
+    background-image:linear-gradient(#4d4d4d, #535151) ;
+    display: block;
+    min-width: 6.7em;
+}
+
+.drop-content a:hover{
+    background-image:linear-gradient(#79a59e8e, #a9f7fa83) ;
+    border: 1px solid black;
+    color: #191b18;
+}
+
+.drop:hover .drop-content, .drop-content.show{
+    display: block;
+    margin-top: 7px;
+    /* border: 1px solid purple; */
+}
+
+.a-box{
+    display: grid;
+    place-content: center;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+
+tr{
+    border-bottom: 1px solid black;
+}
+
+th, td{
+    padding: 12px;
+}
+
+h1{
+    text-align: center;
+}
+
+abbr{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(239, 246, 253);
+    cursor: context-menu;
+}
