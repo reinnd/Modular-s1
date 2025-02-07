@@ -33,29 +33,30 @@ class user {
         $query = mysqli_query($this->dbconn, $sql); 
     
         
-        if (!$query) {
-            die("Query fail: " . mysqli_error($this->dbconn)); 
-        }
-    
-        $data = [];
-        while ($row = mysqli_fetch_object($query)) {
-            $data[] = $row;
-        }
-    
-        return $data;
-        // if ($query->num_rows > 0) {
-        //     while ($data = mysqli_fetch_object($query)) {
-        //         $result[] = $data;
-        //     }
-        //     return $result;
-        // } else {
-        //     echo "tidak ada data";
+        // if (!$query) {
+        //     die("Query fail: " . mysqli_error($this->dbconn)); 
         // }
+    
+        // $data = [];
+        // while ($row = mysqli_fetch_object($query)) {
+        //     $data[] = $row;
+        // }
+    
+        // return $data;
+        if ($query->num_rows > 0) {
+            while ($data = mysqli_fetch_object($query)) {
+                $result[] = $data;
+            }
+            return $result;
+        } else {
+            echo "tidak ada data";
+        }
     }
 
     function add_user($id_user, $username, $email, $pass, $nama, $alamat, $jk, $tempat_lahir, $tanggal_lahir) {
-        $sql = "INSERT INTO user (username, email, password, nama_user, alamat_user, jenis_kelamin, tempatlahir_user, tanggallahir_user) 
-        VALUES ($id_user','$username', '$email', '$pass', '$nama', '$alamat', '$jk', '$tempat_lahir', '$tanggal_lahir')";
+        $sql = "INSERT INTO user 
+        -- (username, email, password, nama_user, alamat_user, jenis_kelamin, tempatlahir_user, tanggallahir_user) 
+        VALUES ('$id_user','$username', '$email', '$pass', '$nama', '$alamat', '$jk', '$tempat_lahir', '$tanggal_lahir')";
         $query = mysqli_query($this->dbconn, $sql);
 
         if (!$query) {

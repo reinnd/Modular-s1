@@ -21,7 +21,8 @@ $user = new user();
 <div class="f-box">
     <div class="cont-box">
         <form action="../controller/c_user.php?action=update" method="POST">
-                <?php foreach ($user->get_data_byId('user', $_GET['id']) as $data) { ?>
+                <?php 
+                foreach ($user->get_data_byId('user', $_GET['id']) as $data) { ?>
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="id_user" value="<?= $data['id_user'] ?>" hidden>
             <input type="text" id="username1" name="username" required class="inp-box" value="<?= $data['username']?>">
@@ -35,10 +36,10 @@ $user = new user();
             <label for="nama">Nama:</label><br>
             <input type="text" id="nama" name="nama" required class="inp-box" value="<?= $data['nama_user']?>">
             <br><br>
-            <!-- <label for="jk">Jenis Kelamin:</label><br>
-            <input type="radio" name="jk" id="jk" required value="laki-laki"> Laki-laki
-            <input type="radio" name="jk" id="jk" required value="perempuan"> Perempuan
-            <br><br> -->
+            <label for="jk">Jenis Kelamin:</label><br>
+            <input type="radio" name="jk" id="jk" required value="<?= $data['jk']?>"> Laki-laki
+            <input type="radio" name="jk" id="jk" required value="<?= $data['jk']?>"> Perempuan
+            <br><br>
             <label for="alamat">Alamat:</label><br>
             <input type="text" id="alamat" name="alamat" required class="inp-box2" value="<?= $data['alamat_user']?>">
             <br><br>
@@ -49,7 +50,8 @@ $user = new user();
             <input type="date" id="tanggal_lahir" required name="tanggal_lahir" class="inp-box" value="<?= $data['tanggalahir_user']?>">
             <br><br>
             <button class="button-box">submit</button>
-            <?php } ?>
+            <?php 
+        } ?>
         </form>
     </div>
     <br><BR><BR>

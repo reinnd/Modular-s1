@@ -39,11 +39,11 @@ if($data) {
             <td><?php echo $data['tempatlahir_user'] . ", " .  date( "Y-F-d" , strtotime($data['tanggallahir_user']))      ?></td>
             <td><?php echo $data['alamat_user']      ?></td>
             <td><center>
-                <a href="form-edit.php?id=<?php $data['id_user'] ?>"><button type="button" class="btn-box">
+                <a href="form-edit.php?id=<?= $data['id_user'] ?>"><button type="button" class="btn-box">
                     Edit
                 </button></a>
 
-                <a onclick="return confirm('apakah yakin akan dihapus?')" href="../controller/c_user.php?id=<?php $data['id_user'] ?>&aksi=hapus">
+                <a onclick="return confirm('apakah yakin akan dihapus?')" href="../controller/c_user.php?id=<?= $data['id_user'] ?>&action=hapus">
                     <button type="button" name="hapus" class="btn-box2s">Hapus</button>
                 </a>
             </center></td>

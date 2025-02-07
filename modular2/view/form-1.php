@@ -16,7 +16,8 @@ include "template/navbar.php";
     <div class="cont-box">
         <form action="../controller/c_user.php?action=tambah" method="POST">
             <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required class="inp-box">
+            <input type="number" id="username" name="id_user" hidden>
+            <input type="text" id="username1" name="username" required class="inp-box">
             <br><br>
             <label for="pass">Password:</label><br>
             <input type="password" id="pass" name="pass" required class="inp-box">

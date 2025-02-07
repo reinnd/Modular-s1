@@ -9,15 +9,15 @@ $data = $user->get_data('user');
 // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //     $handler = new user();
     
-//     // Ambil data dari $_POST
-//     $username = $_POST['username'];
-//     $email = $_POST['email'];
-//     $pass = $_POST['pass'];
-//     $nama = $_POST['nama']; 
-//     $alamat = $_POST['alamat'];
-//     $jk = $_POST['jk'];
-//     $tempat_lahir = $_POST['tempat_lahir'];
-//     $tanggal_lahir = $_POST['tanggal_lahir'];
+    // Ambil data dari $_POST
+    // $username = $_POST['username'];
+    // $email = $_POST['email'];
+    // $pass = $_POST['pass'];
+    // $nama = $_POST['nama']; 
+    // $alamat = $_POST['alamat'];
+    // $jk = $_POST['jk'];
+    // $tempat_lahir = $_POST['tempat_lahir'];
+    // $tanggal_lahir = $_POST['tanggal_lahir'];
 
     
 // }
@@ -33,14 +33,14 @@ try {
 
             //menangkap semua input dari user dengan method post
             $id_user = $_POST['id_user'];
-            $username = $_POST['username1'];
+            $username = $_POST['username'];
             $email = $_POST['email'];
-            $pass = $_POST['password'];
-            $nama = $_POST['nama_user'];
-            $alamat = $_POST['alamat_user'];
-            $jk = $_POST['jenis_kelamin'];
-            $tempat_lahir = $_POST['tempatlahir_user'];
-            $tanggal_lahir = $_POST['tanggallahir_user'];
+            $pass = $_POST['pass'];
+            $nama = $_POST['nama']; 
+            $alamat = $_POST['alamat'];
+            $jk = $_POST['jk'];
+            $tempat_lahir = $_POST['tempat_lahir'];
+            $tanggal_lahir = $_POST['tanggal_lahir'];
 
             // mengecek apakah aksi yang bernilai tambah 
             if ($_GET['action'] == 'tambah') {
