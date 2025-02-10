@@ -44,7 +44,7 @@ class user {
     
         // return $data;
         if ($query->num_rows > 0) {
-            while ($data = mysqli_fetch_object($query)) {
+            while ($data = mysqli_fetch_assoc($query)) {
                 $result[] = $data;
             }
             return $result;
@@ -66,7 +66,7 @@ class user {
         if ($query) {
             echo "<script>alert('Data berhasil ditambahkan'); window.location='../view/tugas1.php';</script>";
         } else {
-            echo "<script>alert('Gagal menambahkan data. Silakan cek log error.'); window.location='../views/form.php';</script>";
+            echo "<script>alert('Gagal menambahkan data. Silakan cek log error.'); window.location='../view/form.php';</script>";
         }
     }
 
@@ -76,9 +76,9 @@ class user {
         $query = mysqli_query($this->dbconn, $sql);
 
         if ($query) {
-            echo "<script>alert('Data Berhasil Di Ubah');window.location='../views/dashboard.php'</script>";
+            echo "<script>alert('Data Berhasil Di Ubah');window.location='../view/dashboard.php'</script>";
         } else {
-            echo "<script>alert('Data Tidak Berhasil Di Ubah');window.location='../views/edit.php'</script>";
+            echo "<script>alert('Data Tidak Berhasil Di Ubah');window.location='../view/edit.php'</script>";
         }
     }
 

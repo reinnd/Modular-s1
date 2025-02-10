@@ -28,16 +28,16 @@ if($data) {
 <?php
     $no = 1;
     $agenow = date("Y");
-    foreach ($data as $data) {
-        $bidate = date( "Y", strtotime($data['tanggallahir_user']));
+    foreach ($data as $data2) {
+        $bidate = date( "Y", strtotime($data2['tanggallahir_user']));
         $umur = $agenow - $bidate;
         ?>
         <tr>
             <td><?php echo $no++ ?></td>
-            <td><?php echo $data['nama_user']      ?></td>
+            <td><?php echo $data2['nama_user']      ?></td>
             <td><?php echo $umur      ?></td>
-            <td><?php echo $data['tempatlahir_user'] . ", " .  date( "Y-F-d" , strtotime($data['tanggallahir_user']))      ?></td>
-            <td><?php echo $data['alamat_user']      ?></td>
+            <td><?php echo $data2['tempatlahir_user'] . ", " .  date( "Y-F-d" , strtotime($data2['tanggallahir_user']))      ?></td>
+            <td><?php echo $data2['alamat_user']      ?></td>
         </tr>
 
 <?php

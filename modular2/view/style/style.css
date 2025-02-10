@@ -104,3 +104,29 @@ abbr{
     color: rgb(239, 246, 253);
     cursor: context-menu;
 }
+
+.btn-box-del{
+    background-color: rgb(184, 18, 18);
+    padding: 4px 7px;
+    color: beige;
+    border: none;
+    border-radius: 0.25em;
+}
+
+.btn-box-del:hover {
+    color: #000000;
+    background-color: rgb(209, 123, 123);
+}
+
+.btn-box-upd{
+    background-color: rgb(50, 74, 179);
+    padding: 4px 7px;
+    color: beige;
+    border: none;
+    border-radius: 0.25em;
+}
+
+.btn-box-upd:hover {
+    color: #000000;
+    background-color: rgb(134, 153, 238);
+}

@@ -3,7 +3,7 @@
 include "template/head.php";
 ?>
 <title>Kelompok</title>
-<link rel="stylesheet" href="style/nord.css?v=1.1">
+<link rel="stylesheet" href="style/nord.css?v=1.2">
 <link rel="stylesheet" href="style/style.css?v=1.1">
 
 <?php
@@ -22,6 +22,10 @@ include "template/navbar.php";
         <ul class="ol-box">
             <li class="k-c">M. Pandji Hutama</li>
             <li class="k-c">Putra Rizkykha Masayu</li>
+            <li class="k-c">Fahmi Albarr</li>
+            <li class="k-c">Aufa Fauzan</li>
+            <li class="k-c">M. Haerul</li>
+            <li class="k-c">Hasan Jamaludin</li>
         </ul>
 </div>
 
