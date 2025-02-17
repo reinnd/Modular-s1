@@ -14,7 +14,7 @@ include "view/template/navbar.php";
 
 <div class="f-box">
     <div class="cont-box">
-        <form action="controller/c_user.php?action=tambah" method="POST">
+        <form action="controller/c_logres.php?action=register" method="POST">
             <label for="username">Username:</label><br>
             <input type="number" id="username" name="id_user" hidden>
             <input type="text" id="username1" name="username" required class="inp-box">
@@ -40,6 +40,7 @@ include "view/template/navbar.php";
             <br><br>
             <label for="tanggal_lahir">Tanggal Lahir:</label><br>
             <input type="date" id="tanggal_lahir" required name="tanggal_lahir" class="inp-box">
+            <input type="text" name="role" id="role" value="user" hidden>
             <br><br>
             <button class="button-box">submit</button>
         </form>
