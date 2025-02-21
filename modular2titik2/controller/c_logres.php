@@ -18,9 +18,13 @@ try{
             $tanggal_lahir = $_POST['tanggal_lahir'];
             $role = $_POST['role'];
 
-$logres->register($id_user, $username, $emaiL, $pass, $nama, $alamat, $jk, $tempat_lahir, $tanggal_lahir, $role);
+            $logres->register($id_user, $username, $emaiL, $pass, $nama, $alamat, $jk, $tempat_lahir, $tanggal_lahir, $role);
 
     } elseif ($_GET['action'] == 'login') {
+          $email = $_POST['email'];
+          $password = $_POST['password'];
+
+          $reglog->login($email, $password);
 
     } elseif ($_GET['action'] == 'logout') {
 
