@@ -61,10 +61,10 @@ class logres {
           exit;
 
         }else {
-          echo "<script>alert('Email Atau Password Salah'), window.location='../view/login.php'</script>";
+          echo "<script>alert('Email Atau Password Salah'), window.location='../login.php'</script>";
         }
       }else {
-        echo "<script>alert('Email Atau Password Salah'), window.location='../view/login.php'</script>";
+        echo "<script>alert('Email Atau Password Salah'), window.location='../login.php'</script>";
       }
     }
   }
