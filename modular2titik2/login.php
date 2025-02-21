@@ -14,16 +14,16 @@ include "view/template/navbar.php";
 
 <div class="f-box">
     <div class="cont-box">
-        <form action="controller/c_logres.php?action=register" method="POST">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username1" name="username" required class="inp-box">
+        <form action="controller/c_logres.php?action=login" method="POST">
+            <label for="email">email:</label><br>
+            <input type="email" id="email" name="email" required class="inp-box">
             <br><br>
             <label for="pass">Password:</label><br>
             <input type="password" id="pass" name="pass" required class="inp-box">
             <br><br>
             <input type="text" name="role" id="role" value="user" hidden>
             <br><br>
-            <button class="button-box">submit</button>
+            <button class="button-box" type="submit">submit</button>
         </form>
     </div>
     <br><BR><BR>
