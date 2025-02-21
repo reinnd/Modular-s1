@@ -32,9 +32,42 @@ class logres {
         }
     }
 
-    function login () {
+    function login($email = null, $password = null) {
+    $sql = "SELECT * FROM user WHERE email = '$email'";
 
+    $query = mysqli_query($this->dbconn,$sql);
+
+    $data = mysqli_fetch_assoc($query);
+
+    if ($data) {
+      //cek kesesuaian password 
+      if (password_verify($password, $data['password'])) {
+        
+        if ($data['role'] == 'admin') {
+
+          //Session Login atmin
+          $_SESSION["data"] = $data;
+          
+          header("location:../views/home_admin.php");
+          exit;
+
+        }elseif ($data['role'] == 'user') {
+
+          //session login user
+
+          $_SESSION["data"] = $data;
+        
+          header("location:../views/home_user.php");
+          exit;
+
+        }else {
+          echo "<script>alert('Email Atau Password Salah'), window.location='../view/login.php'</script>";
+        }
+      }else {
+        echo "<script>alert('Email Atau Password Salah'), window.location='../view/login.php'</script>";
+      }
     }
+  }
 
 }
 
